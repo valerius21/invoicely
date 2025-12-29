@@ -19,7 +19,6 @@ export const createInvoiceItemSchema = z.object(
       .positive({ message: "Quantity must be positive" }),
     unitPrice: z.coerce
       .number({ invalid_type_error: "Unit price must be a number" })
-      .positive({ message: "Unit price must be positive" }),
   },
   { invalid_type_error: "Item must be an object" },
 );
